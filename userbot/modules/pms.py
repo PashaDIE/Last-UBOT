@@ -27,7 +27,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
     "┏━━━━━━━━━━━━━━━━━━━━┓\n"
-    "    Mau Ngpain bang?\n 
+    "    Mau Ngpain bang?\n
     "┗━━━━━━━━━━━━━━━━━━━━┛\n\n"
     f"Gua Ade²anya `{DEFAULTUSER}`\n"
     "╾─────────────────────┛\n\n"
