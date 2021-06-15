@@ -20,11 +20,11 @@ async def insta(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Linux, Mohon Balas Ke Link Instagram`")
+        await event.edit("`Last, Mohon Balas Ke Link Instagram`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
-        await event.edit("`Mohon Maaf Tuan, Saya Membutuhkan Link Media Instagram Untuk Download`")
+        await event.edit("`Mohon Maaf Bang, Gua Membutuhkan Link Media Instagram Untuk Download`")
         return
     chat = "@SaveAsBot"
     reply_message.sender
@@ -40,7 +40,7 @@ async def insta(event):
             await event.client.send_message(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.edit("`Tuan, Mohon Buka Blokir` @SaveAsbot `Lalu Coba Lagi`")
+            await event.edit("`Bang, Mohon Buka Blokir` @SaveAsbot `Lalu Coba Lagi`")
             return
         if response.text.startswith("Forward"):
             await event.edit(
@@ -60,5 +60,5 @@ async def insta(event):
 
 # Linux - Userbot
 # Feri
-CMD_HELP.update({"instagram": "**Modules:** __Instagram__\n\n🐧CMD🐧: `.ig`"
+CMD_HELP.update({"instagram": "**Modules:** __Instagram__\n\n🐣CMD🐣: `.ig`"
                  "\n**Penjelasan:** Download Media di Postingan Instagram, Balas ke link instagram ketik `.ig`"})
