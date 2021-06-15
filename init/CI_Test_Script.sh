@@ -13,7 +13,7 @@ export SEMAPHORE_PROJECT_DIR=`pwd`
 . "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"/telegram
 TELEGRAM_TOKEN=${BOT_API_KEY}
 export BOT_API_KEY TELEGRAM_TOKEN
-tg_sendinfo "<code>I am gonna merge staging into Linux-Userbot</code>"
+tg_sendinfo "<code>I am gonna merge staging into Last-Userbot</code>"
 cd
 git clone https://github.com/mkaraniya/OpenUserBot.git
 cd OpenUserBot
