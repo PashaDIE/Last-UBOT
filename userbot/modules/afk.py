@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**Tuan ➡{ALIVE_NAME} Sedang AFK!**",
-    f"**Tuan ➡{ALIVE_NAME} Sedang AFK\n •Mohon Menunggu Hingga Dia Online Kembali**",
-    f"**Tuan ➡{ALIVE_NAME} Sedang AFK!\n •Mohon Jangan Spam Tunggu Dia Online Kembali**",
-    f"**Tuan ➡{ALIVE_NAME} Sedang AFK!**",
+    f"**Bang ➡{ALIVE_NAME} Sedang AFK!**",
+    f"**Bang ➡{ALIVE_NAME} Sedang AFK\n •Mohon Menunggu Hingga Dia Online Kembali**",
+    f"**Bang ➡{ALIVE_NAME} Sedang AFK!\n •Mohon Jangan Spam Tunggu Dia Online Kembali**",
+    f"**Bang ➡{ALIVE_NAME} Sedang AFK!**",
 ]
 
 
@@ -62,16 +62,16 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"**Tuan **\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Telah Afk...\
+        await afk_e.edit(f"**Bang **\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Telah Afk...\
         \n𝘼𝙡𝙖𝙨𝙖𝙣: `{string}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
     else:
-        await afk_e.edit(f"**Tuan **\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Telah Afk...\n╰✠╼━━━━━━❖━━━━━━━✠╯")
+        await afk_e.edit(f"**Bang **\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Telah Afk...\n╰✠╼━━━━━━❖━━━━━━━✠╯")
     if user.last_name:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "AFK"))
     else:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="!"))
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**Linux Telah AFK!**")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**Last Telah AFK!**")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**Tuan `Sudah Tidak Afk Lagi`...**")
+        msg = await notafk.respond("**Jagoan `Sudah Tidak Afk Lagi`...**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
@@ -243,7 +243,7 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)} Detik`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"**Linux AFK**\n╭✠╼━━━━━━❖━━━━━━━✠╮\nMohon Maaf `{ALIVE_NAME}` Lagi Afk...\nLama AFK : {afk_since}.\
+                    await sender.reply(f"**Last AFK**\n╭✠╼━━━━━━❖━━━━━━━✠╮\nMohon Maaf `{ALIVE_NAME}` Lagi Afk...\nLama AFK : {afk_since}.\
                         \n𝘼𝙡𝙖𝙨𝙖𝙣: `{AFKREASON}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -252,7 +252,7 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"**Linux AFK**\n╭✠╼━━━━━━❖━━━━━━━✠╮\nMohon Maaf `{ALIVE_NAME}` Lagi Afk... Sebentar Bangsat!!\nLama AFK : {afk_since}.\
+                        await sender.reply(f"**Last AFK**\n╭✠╼━━━━━━❖━━━━━━━✠╮\nMohon Maaf `{ALIVE_NAME}` Lagi Afk... Sebentar Bangsat!!\nLama AFK : {afk_since}.\
                         \n𝘼𝙡𝙖𝙨𝙖𝙣: `{AFKREASON}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
