@@ -22,10 +22,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**Maaf Tuan {ALIVE_NAME} Sedang OFF!**",
-    f"**Maaf Tuan {ALIVE_NAME} Sedang OFF\n Tunggu Sampai Online!**",
-    f"**Tuan {ALIVE_NAME} Sedang OFF\n Tunggulah Sampai Online**",
-    f"**Maaf Tuan {ALIVE_NAME} Sedang OFF!**",
+    f"**Maaf Bang {ALIVE_NAME} Sedang OFF!**",
+    f"**Maaf Bang {ALIVE_NAME} Sedang OFF\n Tunggu Sampai Online!**",
+    f"**Bang {ALIVE_NAME} Sedang OFF\n Tunggulah Sampai Online**",
+    f"**Maaf Bang {ALIVE_NAME} Sedang OFF!**",
 ]
 
 
@@ -69,7 +69,7 @@ async def set_afk(afk_e):
     else:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="OFFLINE"))
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#OFF\n**Tuan Telah OFF!**")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#OFF\n**Abang²an Telah OFF!**")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -164,7 +164,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**Tuan {ALIVE_NAME} Sedang OFF** {afk_since} **Yang Lalu.**\
+                    await mention.reply(f"**Bang {ALIVE_NAME} Sedang OFF** {afk_since} **Yang Lalu.**\
                         \n☞ **Alasan:** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -241,7 +241,7 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)} Detik`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"Tuan **{ALIVE_NAME} Sedang OFF** {afk_since} **Yang Lalu**.\
+                    await sender.reply(f"Bang **{ALIVE_NAME} Sedang OFF** {afk_since} **Yang Lalu**.\
                         \n☞ **Alasan**: `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -251,7 +251,7 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await sender.reply(f"Tuan **{ALIVE_NAME} Sedang OFF** {afk_since} **Yang Lalu.**\
-                            \n☞ **Alasan**: `{AFKREASON}`")
+                         \n☞ **Alasan**: `{AFKREASON}`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
@@ -263,7 +263,7 @@ async def afk_on_pm(sender):
 
 CMD_HELP.update({
     "off":
-    "🐧CMD🐧`.off` [Alasan]\
+    "🐣CMD🐣`.off` [Alasan]\
 \nUsage: Sama Seperti AFK, Lakukan ketika ingin OFF.\nSiapapun Yang Balas, Tag, Atau Chat Kamu \
 Mereka Akan Tau Alasan Kamu OFF.\n\nOFF Bisa Dilakukan Dan Dibatalkan Dimanapun.\
 "
