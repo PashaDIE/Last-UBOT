@@ -88,7 +88,7 @@ async def _(event):
     await event.edit("`Mengecek kuota...🐣`")
     sleep(1)
     await event.edit(
-        f"★ **INFO KUOTA KING** ★\n╔══════━━━━━━━══════╗ \n"
+        f"★ **INFO KUOTA LAST** ★\n╔══════━━━━━━━══════╗ \n"
         f"➠ **Penggunaan Kuota :** `{ALIVE_NAME}` \n"
         f"• **Hasil :** `00` **Jam** - `00` **Menit** \n"
         f"• **Persen :** `00`% \n"
@@ -97,8 +97,8 @@ async def _(event):
         f"• **Sisa :**  `1000` **Jam** - `10` **Menit** \n"
         f"• **Persen :** `00`% \n"
         f"╚══════━━━━━━━══════╝ \n"
-        f"◈ **KING :** {ALIVE_NAME} \n"
-        f"◈ **REPO :** [King-Userbot](https://github.com/apisuserbot/King-Userbot)")
+        f"◈ **LAST :** {ALIVE_NAME} \n"
+        f"◈ **REPO :** [Last-Userbot](https://github.com/PashaDIE/Last-UBOT)")
 
 CMD_HELP.update(
     {
