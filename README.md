@@ -1,7 +1,7 @@
-<a href="https://cooltext.com"><img src="https://images.cooltext.com/1616790494429.gif" width="802" height="96" alt="King Userbot" /></a>
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/5536181.gif" width="802" height="96" alt="Last Userbot" /></a>
 
 <p align="center">
-  <a href="https://github.com/apisuserbot/Last-UBOT/fork">
+  <a href="https://github.com/PashaDIE/Last-UBOT/fork">
     <img src="https://img.shields.io/github/forks/PashaDIE/Last-UBOT?label=Fork&style=social">
     
   </a>
