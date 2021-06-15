@@ -6,7 +6,7 @@
 <h3 align="center">Userbot Yang Digunakan Untuk Bersenang-Senang Di Telegram</h3>
 <p align="center">&nbsp;</p>
 
-### Repo Linux Userbot
+### Repo Last Userbot
 Repo Yang Dibuat [Pasha](https://t.me/PashaDIE) Dari Berbagai Repo Userbot Github 
 String_Session [Tekan](https://replit.com/@ferikunn/String-Sesson-Saya)
 
