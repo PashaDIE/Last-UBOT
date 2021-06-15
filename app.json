@@ -1,7 +1,7 @@
 {
-  "name": "Linux-Userbot",
-  "description": "[Linux-Userbot] USERBOT TELEGRAM.",
-  "logo": "https://telegra.ph/file/a347ed9a0b3ae6db7b24c.jpg",
+  "name": "Last-Userbot",
+  "description": "》Last-UBOT《 USERBOT TELEGRAM.",
+  "logo": "https://telegra.ph/file/cffd5436a0c1b1a1634c4.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/ferikunn/Linux-Userbot",
-  "telegram": "https://t.me/xflicks",
-  "success_url": "https://t.me/xflicks",
+  "repository": "https://github.com/PashaDIE/Last-UBOT",
+  "telegram": "https://t.me/PashaDIE",
+  "success_url": "https://t.me/PashaDIE",
   "stack": "container",
   "env": {
     "API_KEY": {
@@ -155,15 +155,15 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "LINUX-USERBOT",
+      "value": "LAST-USERBOT",
       "required": false
     },
     "ALIVE_NAME": {
       "description": "Nama untuk menunjukan pesan .alive",
       "required": false
     },
-    "LINUX_TEKS_KUSTOM": {
-      "description": "Kustom Pesan Alive Mu Untuk Perintah .linux (Isi Terserah)",
+    "LAST_TEKS_KUSTOM": {
+      "description": "Kustom Pesan Alive Mu Untuk Perintah .last (Isi Terserah)",
       "required": false
     },
     "S_PACK_NAME": {
