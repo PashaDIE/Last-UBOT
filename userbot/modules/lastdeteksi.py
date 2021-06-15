@@ -33,7 +33,7 @@ async def _(event):
             await conv.send_message(f"{uid}")
         except YouBlockedUserError:
             await steal.reply(
-                "``Tuan Mohon Unblock @tgscanrobot Dan Coba Lagi```"
+                "``Abang Mohon Unblock @tgscanrobot Dan Coba Lagi```"
             )
         response = await conv.get_response()
         await event.client.send_read_acknowledge(conv.chat_id)
@@ -54,6 +54,6 @@ def user_full_name(user):
 # Feri Ganteng
 CMD_HELP.update({
     "deteksi":
-        "🐧CMD🐧`.deteksi`\
+        "🐣CMD🐣`.deteksi`\
           \nPenjelasan: Melihat Riwayat Grup Yang Pernah/Sedang dimasuki."
 })
