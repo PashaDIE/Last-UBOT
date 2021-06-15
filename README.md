@@ -29,12 +29,13 @@ String_Session [Tekan](https://replit.com/@ferikunn/String-Sesson-Saya)
    <a href="https://t.me/LastUserbot"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
 
 
-## <p align="center">DEPLOY Last-Userbot</p>
+## Deploy To Heroku ⚜
 
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/PashaDIE/Last-UBOT/tree/Last-UBOT"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-black?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/PashaDIE/Last-UBOT"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <br>
+
 </p>
 
 ## Kredit
