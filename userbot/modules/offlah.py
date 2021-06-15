@@ -65,9 +65,9 @@ async def set_afk(afk_e):
     else:
         await afk_e.edit(f"**{ALIVE_NAME} Telah OFF**")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "OFF"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "OFF 🐣"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="OFFLINE"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="🐣OFFLINE🐣"))
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#OFF\n**Abang²an Telah OFF!**")
     ISAFK = True
@@ -173,7 +173,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"**Tuan {ALIVE_NAME} Masih OFF** {afk_since} **Yang Lalu.**\
+                        await mention.reply(f"**Bang {ALIVE_NAME} Masih OFF** {afk_since} **Yang Lalu.**\
                             \n☞ **Alasan:** `{AFKREASON}`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
