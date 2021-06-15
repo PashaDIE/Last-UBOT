@@ -26,28 +26,20 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    "┏▼━━━━━━━━━━━━━━━━━━━▼┓\n"
-    "    Mau Apa Kawan?\n"
-    f"  MAU GANGGUIN BAGINDA `{DEFAULTUSER}` ?\n"
+    "┏━━━━━━━━━━━━━━━━━━━━┓\n"
+    "    Mau Ngpain bang?\n 
+    "┗━━━━━━━━━━━━━━━━━━━━┛\n\n"
+    f"Gua Ade²anya `{DEFAULTUSER}`\n"
+    "╾─────────────────────┛\n\n"
+    "┏━━━━━━━━━━━━━━━━━━━━▼┓\n"
+    " Baca Bang/Kak\n"
+    " Jan dispam ya bang\n"
+    " Jangan Rusuh ya bang\n"
+    " Sabar Pasti Abang²an Gua Bales chat lu\n"
+    f" `{DEFAULTUSER}` Tungguin aja bang\n"
     "┗▲━━━━━━━━━━━━━━━━━━━▲┛\n\n"
-
-    f"Gua Babu Nya `{DEFAULTUSER}`\n"
-    "╾─────────────────────╼\n\n"
-
-    "┏▼━━━━━━━━━━━━━━━━━━━▼┓\n"
-    " Baca Yakk\n"
-    " Gausah Spam Ya\n"
-    " Jangan Bandel\n"
-    " Sabar Pasti Majikanku balas pesanmu\n"
-    " Tungguin Aja Ya Ngentot Sampai Baginda\n"
-    f" `{DEFAULTUSER}` Ngebaca Pesan Elu\n"
-    "┗▲━━━━━━━━━━━━━━━━━━━▲┛\n\n"
-
-    "╾─────────────────────╼\n"
-    "   😡😡Konsolllll 😡😡\n"
-    "─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇─̇\n"
     f"- Babu Nya `{DEFAULTUSER}`\n"
-    "- Jangan spam Ya anjing, Sabar!!")
+    "- Jangan spam Ya Bang, Sabarin aja!!")
 # =================================================================
 
 
@@ -246,9 +238,9 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`OK, Pesan Telah Diterima..`")
+        return await apprvpm.edit("`OK, Pesan Lu Udah gua terima..`")
 
-    await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `OK, Pesan Telah Diterima..`")
+    await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `OK, Pesan Lu Udah Gua terima..`")
     await apprvpm.delete(getmsg)
     await message.delete()
 
