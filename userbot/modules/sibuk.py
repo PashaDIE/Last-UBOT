@@ -67,9 +67,9 @@ async def set_afk(afk_e):
     else:
         await afk_e.edit(f"**⚜ Sibuk**\n\n╭╼══════════════╾\n**{ALIVE_NAME} Telah Sibuk!**\n╰╼═════════╾")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "⚡𝗦𝗜𝗕𝗨𝗞⚡"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "⚜𝗦𝗜𝗕𝗨𝗞⚜"))
     else:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="⚡𝗦𝗜𝗕𝗨𝗞⚡"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="⚜𝗦𝗜𝗕𝗨𝗞⚜"))
     if BOTLOG:
         await afk_e.client.send_message(BOTLOG_CHATID, "#SIBUK\n**Abang²an Telah SIBUK!**")
     ISAFK = True
