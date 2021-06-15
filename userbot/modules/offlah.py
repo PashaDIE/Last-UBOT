@@ -65,7 +65,7 @@ async def set_afk(afk_e):
     else:
         await afk_e.edit(f"**{ALIVE_NAME} Telah OFF**")
     if user.last_name:
-        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "OFF 🐣"))
+        await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "🐣OFF🐣"))
     else:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="🐣OFFLINE🐣"))
     if BOTLOG:
