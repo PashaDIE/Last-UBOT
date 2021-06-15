@@ -46,6 +46,10 @@ String_Session [Tekan](https://replit.com/@ferikunn/String-Sesson-Saya)
 
    <a href="https://t.me/LastUserbot"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
 
+### String Session 🖇
+`
+Klik tombol di samping untuk membuat string milikmu`
+   [![Run on Repl.it](https://repl.it/badge/github/STARKGANG/friday)](https://replit.com/@PashaDIE/String-Session?v=1)
 
 ## Deploy To Heroku ⚜
 
