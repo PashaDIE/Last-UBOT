@@ -26,7 +26,7 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    f"╔══════ 🤴🏻 ══════╗\n      **ROOM CHAT Abang²an**     \n╚══════ 〠 ══════╝  \n"
+    f"╔══════ 🤴🏻 ══════╗\n**ROOM CHAT Abang²an**     \n╚══════ 〠 ══════╝  \n"
     f"⎆ __Halo Bang , gua bot yang menjaga room chat Abang²an {DEFAULTUSER} di mohon jangan melakukan spam , kalau Lu melakukan itu OTOMATIS gua akan memblockir Lu!__ \n"
     "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
     f"⎆**DILARANG SPAM 1/3** \n"
