@@ -119,7 +119,7 @@ async def update(event, repo, ups_rem, ac_br):
     await asyncio.sleep(1)
     await event.edit('**🐣Last-Userbot🐣** `Di Restart....`')
     await asyncio.sleep(1)
-    await event.edit('`Tungguin beberapa detik banh`')
+    await event.edit('`Tungguin beberapa detik bang`')
     await asyncio.sleep(10)
     await event.delete()
 
