@@ -26,21 +26,15 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    "┏━━━━━━━━━━━━━━━━━━━━┓\n"
-    "    Mau Ngpain bang?\n
-    ____________________________________
-    f"Gua Ade²anya `{DEFAULTUSER}`\n"
-    "╾─────────────────────┛\n\n"
-    "┏━━━━━━━━━━━━━━━━━━━━▼┓\n"
-    " Baca Bang/Kak\n"
-    " Jan dispam ya bang\n"
-    " Jangan Rusuh ya bang\n"
-    " Sabar Pasti Abang²an Gua Bales chat lu\n"
-    f" `{DEFAULTUSER}` Tungguin aja bang\n"
-    "┗▲━━━━━━━━━━━━━━━━━━━▲┛\n\n"
-    f"- Babu Nya `{DEFAULTUSER}`\n"
-    "- Jangan spam Ya Bang, Sabarin aja!!")
+    f"╔══════ 🤴🏻 ══════╗\n      **ROOM CHAT Abang²an**     \n╚══════ 〠 ══════╝  \n"
+    f"⎆ __Halo Bang , gua bot yang menjaga room chat Abang²an {DEFAULTUSER} di mohon jangan melakukan spam , kalau Lu melakukan itu OTOMATIS gua akan memblockir Lu!__ \n"
+    "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
+    f"⎆**DILARANG SPAM 1/3** \n"
+    "⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊\n"
+    f"◈ **Abang²an** : {DEFAULTUSER}\n"
+    f"◈ **Ade²an** 🐣Last-Userbot🐣\n")
 # =================================================================
+
 
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
