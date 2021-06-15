@@ -2,7 +2,7 @@ import asyncio
 # Credit To @senku_ishigamiii/@uzumaki_naruto_xd
 
 
-@ultroid_cmd(pattern="rasengan")
+CMD_HELP(pattern="rasengan")
 async def naruto(ult):
     await ult.edit("Hey You!")
     await asyncio.sleep(1)
