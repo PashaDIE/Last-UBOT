@@ -36,7 +36,6 @@ DEF_UNAPPROVED_MSG = (
 # =================================================================
 
 
-
 @register(incoming=True, disable_edited=True, disable_errors=True)
 async def permitpm(event):
     """Prohibits people from PMing you without approval. \
