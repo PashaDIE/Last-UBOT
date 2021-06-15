@@ -1,8 +1,7 @@
 import asyncio
 # Credit To @senku_ishigamiii/@uzumaki_naruto_xd
 
-
-@ultroid_cmd(pattern="chidori")
+CMD_Hel(pattern="chidori")
 async def naruto(ult):
     await ult.edit("Hello")
     await asyncio.sleep(1)
