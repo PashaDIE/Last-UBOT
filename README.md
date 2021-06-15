@@ -1,4 +1,26 @@
-# Last Userbot
+<a href="https://cooltext.com"><img src="https://images.cooltext.com/1616790494429.gif" width="802" height="96" alt="King Userbot" /></a>
+
+<p align="center">
+  <a href="https://github.com/apisuserbot/Last-UBOT/fork">
+    <img src="https://img.shields.io/github/forks/PashaDIE/Last-UBOT?label=Fork&style=social">
+    
+  </a>
+  <a href="https://github.com/PashaDIE/Last-UBOT">
+    <img src="https://img.shields.io/github/stars/PashaDIE/Last-UBOT?style=social">
+  </a>
+</p>
+
+<p align="left">
+  <a href="https://github.com/PashaDIE/Last-UBOT/blob/Last-Userbot/LICENSE"><img src="https://img.shields.io/github/license/PashaDIE/Last-UBOT?&style=social&logo=github">
+  </a></p>
+
+![Repo Size](https://img.shields.io/github/repo-size/PashaDIE/Last-UBOT?&style=plastic&logo=github)
+[![GitHub issues](https://img.shields.io/github/issues/PashaDIE/Last-UBOT?&style=plastic&logo=github)](https://github.com/PashaDIE/Last-UBOT/issues)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/PashaDIE/Last-UBOT?&style=plastic&logo=github)](https://github.com/PashaDIE/Last-UBOT/graphs/commit-activity)
+[![GitHub contributors](https://img.shields.io/github/contributors/PashaDIE/Last-UBOT?&style=plastic&logo=github)](https://GitHub.com/PashaDIE/Last-UBOT/graphs/contributors/)
+<p align="justify">
+
+
 ![Last-Userbot Logo](https://telegra.ph/file/cffd5436a0c1b1a1634c4.jpg)
 
 
@@ -32,7 +54,7 @@ String_Session [Tekan](https://replit.com/@ferikunn/String-Sesson-Saya)
 ## Deploy To Heroku ⚜
 
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/PashaDIE/Last-UBOT"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/PashaDIE/Last-UBOT"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-Red?style=flat&logo=heroku" width="210" height="34.45" /></a></p>
 
 <br>
 
