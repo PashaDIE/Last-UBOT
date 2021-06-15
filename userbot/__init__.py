@@ -319,7 +319,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```🐣LAST-USERBOT🐣 Udah Aktif bang```")
+    await bot.send_message(BOTLOG_CHATID, "```🐣𝗟𝗔𝗦𝗧-𝗨𝗕𝗢𝗧🐣 Udah Aktif bang```")
     return
 
 with bot:
