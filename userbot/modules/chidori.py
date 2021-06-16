@@ -1,7 +1,7 @@
 import asyncio
 # Credit To @senku_ishigamiii/@uzumaki_naruto_xd
 
-CMD_Hel(pattern="chidori")
+CMD_HELP(pattern="chidori")
 
 
 async def naruto(ult):
