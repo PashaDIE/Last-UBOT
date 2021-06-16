@@ -27,9 +27,9 @@ from userbot.events import register
 
 KANGING_STR = [
     "Saatnya Mbandet stiker suuuuu...:)",
-    "Stikernya Gw colong ya Ajggg",
-    "Stikernya Aku Curi......",
-    "Stickernya Tak Embat suu...",
+    "Stikernya Gua colong ya Bang",
+    "Stikernya Gua Colong......",
+    "Stickernya Gua Embat bang...",
 ]
 
 
@@ -58,7 +58,7 @@ async def kang(args):
                 in message.media.document.attributes
             ):
                 emoji = message.media.document.attributes[1].alt
-                if emoji != "🐧":
+                if emoji != "🐣":
                     emojibypass = True
         elif "tgsticker" in message.media.document.mime_type:
             await args.edit(f"`{random.choice(KANGING_STR)}`")
@@ -73,9 +73,9 @@ async def kang(args):
             is_anim = True
             photo = 1
         else:
-            return await args.edit("`File Tidak Didukung Tuan!`")
+            return await args.edit("`File Tidak Didukung Bang Gimana nih!`")
     else:
-        return await args.edit("`Maaf Tuan, Saya Gagal Mengambil Sticker Ini!`")
+        return await args.edit("`Maaf Bang, Gua Gagal Mengambil Sticker Ini susah bat bang!`")
 
     if photo:
         splat = args.text.split()
