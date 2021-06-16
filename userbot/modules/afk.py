@@ -166,7 +166,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**Linux AFK**\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Afk :)...\nLama AFK : {afk_since}.\
+                    await mention.reply(f"**Last AFK**\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Afk :)...\nLama AFK : {afk_since}.\
                         \n𝘼𝙡𝙖𝙨𝙖𝙣: `{AFKREASON}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -175,7 +175,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"**Linux AFK**\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Afk :)...\nLama AFK : {afk_since}.\
+                        await mention.reply(f"**Last AFK**\n╭✠╼━━━━━━❖━━━━━━━✠╮\n{ALIVE_NAME} Afk :)...\nLama AFK : {afk_since}.\
                         \n𝘼𝙡𝙖𝙨𝙖𝙣: `{AFKREASON}`\n╰✠╼━━━━━━❖━━━━━━━✠╯")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
