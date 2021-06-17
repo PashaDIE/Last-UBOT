@@ -235,11 +235,11 @@ async def lastlog(lstlog):
 # @LORDUSERBOT_GROUP
 CMD_HELP.update(
     {
-        "lastfm": "⚡CMD⚡`.lastfm\
+        "lastfm": "🐣CMD🐣`.lastfm\
     \nPenjelasan: Menampilkan trek scrobbling saat ini atau scrobbles terbaru jika tidak ada yang diputar.\
-    \n\nlastbio: ⚡CMD⚡`.lastbio <on/off>\
+    \n\nlastbio: 🐣CMD🐣`.lastbio <on/off>\
     \nPenjelasan: Mengaktifkan/Menonaktifkan pemutaran last.fm saat ini ke bio.\
-    \n\nlastlog: ⚡CMD⚡`.lastlog <on/off>\
+    \n\nlastlog: 🐣CMD🐣`.lastlog <on/off>\
     \nPenjelasan: Aktifkan/Nonaktifkan log bio last.fm di grup bot-log."
     }
 )
