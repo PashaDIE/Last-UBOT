@@ -39,4 +39,3 @@ CMD_HELP.update({
     "`.chidori`\
 \nPenjelasan: Cuman iseng doang\
 \n\n`.chidori`\
-\nPenjelasan: test aja bang.\
