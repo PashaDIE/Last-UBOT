@@ -18,7 +18,7 @@ async def typewriter(typew):
 # Create by myself @PashaDIE
 
 CMD_HELP.update({
-    'Naruto':
-    '🐣CMD🐣`.santet`\
-        \nUsage: Santet Online Buat Bercanda Doang:).'
+    'sasuke':
+    '🐣CMD🐣`.chidori`\
+        \nUsage: Buat seneng seneng doang:).'
 })
