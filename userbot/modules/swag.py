@@ -10,13 +10,13 @@ async def _(event):
 
         return
 
-    animation_interval = 0.1
+    animation_interval = (5:)
 
-    animation_ttl = range(117)
+    animation_ttl = range(0, 100)
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == ".snoopweed":
+    if input_str == ".swag":
 
         await event.edit(input_str)
 
