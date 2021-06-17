@@ -1,6 +1,6 @@
 from time import sleep
 from userbot.events import register
-
+from userbot import CMD_HELP
 
 @register(outgoing=True, pattern='^.chidori(?: |$)(.*)')
 async def typewriter(typew):
