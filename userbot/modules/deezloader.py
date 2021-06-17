@@ -166,6 +166,6 @@ async def upload_track(track_location, message):
 # @LORDUSERBOT_GROUP
 CMD_HELP.update(
     {
-        "deezload": "**Modules:** __Deezload__\n\n⚡CMD⚡: `.deez <spotify/deezer link> <Format>`"
+        "deezload": "**Modules:** __Deezload__\n\n🐣CMD🐣: `.deez <spotify/deezer link> <Format>`"
         "\n**Penjelasan:** Unduh musik dari deezer."
         "\n\n *Format= `FLAC`, `MP3_320`, `MP3_256`, `MP3_128`."})
