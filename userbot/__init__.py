@@ -423,10 +423,10 @@ with bot:
                     buttons=[
                         [
                             custom.Button.url(
-                                "🐣Reponya Bang🐣",
+                                "🐣Repo🐣",
                                 "https://github.com/PashaDIE/Last-UBOT"),
                             custom.Button.url(
-                                "Ownernya Bang 🤴🏻",
+                                "Owner🤴🏻",
                                 "t.me/PashaDIE")],
                     ],
                     link_preview=False,
