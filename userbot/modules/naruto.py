@@ -1,6 +1,5 @@
 from time import sleep
 from userbot.events import register
-from userbot import CMD_HELP
 
 
 @register(outgoing=True, pattern='^.chidori(?: |$)(.*)')
@@ -33,9 +32,3 @@ async def typewriter(typew):
     await typew.edit("You: ( ✖╭╮✖ )")
 
 # Create by myself @PashaDIE
-
-CMD_HELP.update({
-    "naruto":
-    "`.chidori`\
-\nPenjelasan: Cuman iseng doang\
-\n\n`.chidori`\
