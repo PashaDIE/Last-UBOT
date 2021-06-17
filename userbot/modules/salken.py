@@ -2,7 +2,7 @@
 
 import asyncio
 
-from userbot import ALIVE_NAME, CMD_HELP, COUNTRY,
+from userbot import ALIVE_NAME, CMD_HELP, COUNTRY.
 from userbot.events import register
 
 
