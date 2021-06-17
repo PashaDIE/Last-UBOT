@@ -465,7 +465,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Eror 404 not found Linux Userbot Anda Sendiri, Jangan Menggunakan Milik Bang {ALIVE_NAME}"
+                reply_pop_up_alert = f"Eror 404 not found Last Userbot Anda Sendiri, Jangan Menggunakan Milik Bang {ALIVE_NAME}"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
