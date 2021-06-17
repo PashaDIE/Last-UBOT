@@ -1,7 +1,7 @@
 # import userbot by apis
 
 from time import sleep
-from userbot import ALIVE_NAME, CMD_HELP
+from userbot import CMD_HELP
 from userbot.events import register
 
 
@@ -46,6 +46,7 @@ async def typewriter(typew):
     await typew.edit("**Tapi Bo'ong🤾🏻**")
     sleep(0.07)
     await typew.edit("**Dasar Wibu, Istri Kartun🪂**")
+
 
 @register(outgoing=True, pattern='^.wibbu(?: |$)(.*)')
 async def typewriter(typew):
@@ -103,7 +104,7 @@ async def typewriter(typew):
     await typew.edit("🎯")
     sleep(2)
     await typew.edit("**Kasian Si Wibu Wokwokwok**")
-    
+
 
 CMD_HELP.update(
     {
