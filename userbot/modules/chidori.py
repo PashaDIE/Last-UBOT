@@ -14,5 +14,12 @@ async def typewriter(typew):
     await typew.edit("( ◗_ ╂ ) ☞✹)Chidori ")
     sleep(2)
     await typew.edit("You:(✖﹏✖)")
+    
+CMD_HELP.update(
+    {
+        "babu": "🐣 **Cmd** : `.chidori`"
+        "\n🐣 **Descriptions** : Test aja Bang."
+    }
+)
 
 # Create by myself @PashaDIE
