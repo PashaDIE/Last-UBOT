@@ -18,11 +18,6 @@ async def typewriter(typew):
 
 # Create by myself @PashaDIE
 
-from time import sleep
-from userbot.events import register
-from userbot import CMD_HELP
-
-
 @register(outgoing=True, pattern='^.rasengan(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
