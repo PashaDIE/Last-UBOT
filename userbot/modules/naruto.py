@@ -37,6 +37,6 @@ async def typewriter(typew):
 CMD_HELP.update({
     "naruto":
     "🐣CMD🐣`.rasengan`\
-\nPenjelasan: Test aja bang.\
+\nDeskripsi: Test aja bang.\
 \n\n🐣CMD🐣`.chidori`\
-\nPenjelasan: Test aja bang.\
+\nDeskripsi: Test aja bang.\
