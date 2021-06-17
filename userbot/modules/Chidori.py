@@ -17,8 +17,8 @@ async def typewriter(typew):
     await typew.edit("You:(✖﹏✖)")
 # Create by myself @PashaDIE
 
-
 CMD_HELP.update({
-    "chidori":
-    "🐣CMD🐣`.chidori`\
-\nPenjelasan: Cek lah asw.\
+    'Naruto':
+    '🐣CMD🐣`.santet`\
+        \nUsage: Santet Online Buat Bercanda Doang:).'
+})
