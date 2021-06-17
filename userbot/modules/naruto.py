@@ -39,4 +39,4 @@ CMD_HELP.update({
     "🐣CMD🐣`.rasengan`\
 \nDeskripsi: Test aja bang.\
 \n\n🐣CMD🐣`.chidori`\
-\nDeskripsi: Test aja bang.\
+\nDeskripsi: Test aja coba bang.\
