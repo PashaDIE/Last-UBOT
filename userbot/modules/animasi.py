@@ -3,15 +3,15 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern='^.feri(?: |$)(.*)')
+@register(outgoing=True, pattern='^.pasha(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
-    await typew.edit("`Hai Perkenalkan Namaku Feri`")
+    await typew.edit("`Hai Kenalin Nama gua pasha`")
     sleep(3)
-    await typew.edit("`17 Tahun`")
+    await typew.edit("`15 Tahun`")
     sleep(1)
-    await typew.edit("`Tinggal Di Trenggalek, Salam Kenal:)`")
+    await typew.edit("`Tinggal Di Bekasi, Salam Kenal:)`")
 # Create by myself @localheart
 
 
@@ -19,11 +19,11 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
-    await typew.edit("`Cuma Mau Bilang`")
+    await typew.edit("`Gua mao Bilang`")
     sleep(3)
-    await typew.edit("`Aku Sayang Kamu`")
+    await typew.edit("`Gua Sayang Lu`")
     sleep(1)
-    await typew.edit("`I LOVE YOU 💞`")
+    await typew.edit("`I LOVE YOU NENG 🐣`")
 # Create by myself @localheart
 
 
@@ -59,14 +59,14 @@ async def typewriter(typew):
 
 CMD_HELP.update({
     "animasi3":
-    "🐧CMD🐧`.pe`\
+    "🐣CMD🐣`.pe`\
 \nPenjelasan: Cek lah asw.\
-\n\n🐧CMD🐧`.feri`\
+\n\n🐣CMD🐣`.pasha`\
 \nPenjelasan: Cek lah asw.\
-\n\n🐧CMD🐧`.ilyu`\
+\n\n🐣CMD🐣`.ilyu`\
 \nPenjelasan: Cek lah asw.\
-\n\n🐧CMD🐧`p`\
+\n\n🐣CMD🐣`p`\
 \nPenjelasan: Cek lah asw.\
-\n\n🐧CMD🐧`.semangat`\
+\n\n🐣CMD🐣`.semangat`\
 \nPenjelasan: Cek lah asw."
 })
