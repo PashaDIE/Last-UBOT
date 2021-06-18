@@ -1,4 +1,4 @@
-#import userbot by pasha
+# import userbot by pasha
 
 from time import sleep
 from userbot import CMD_HELP
