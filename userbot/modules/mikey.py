@@ -5,7 +5,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern='^.wibbu(?: |$)(.*)')
+@register(outgoing=True, pattern='^.mikey(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**MI MIII MII MIII.....**")
