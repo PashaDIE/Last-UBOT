@@ -262,15 +262,15 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"     **《━❖<🐣 Last-Userbot 🐣 >❖━》** \n\n"
-        f"❖━❖🤴🏻 **Abang²an**❖━❖\n   >>> `{DEFAULTUSER}` \n"
-        f"❖━❖👤 **Username**❖━❖\n   >>> `@{user.username}` \n"
-        f"❖━❖⚙️ **Telethon**❖━❖\n   >>> `Versi {version.__version__}` \n"
-        f"❖━❖🐍 **Python**❖━❖\n   >>> `Versi {python_version()}` \n"
-        f"❖━❖👾 **Versi Bot**❖━❖\n   ↳ `{BOT_VER}` \n"
-        f"❖━❖📂 **Modul**❖━❖\n   ↳ `{len(modules)}` \n\n"
+        f"     **《━━❖<🐣 Last-Userbot 🐣 >❖━━》** \n\n"
+        f"❖━━🤴🏻 **Abang²an**❖━❖\n   ↳ `{DEFAULTUSER}` \n"
+        f"❖━━👤 **Username**━━❖\n   ↳ `@{user.username}` \n"
+        f"❖━━⚙️ **Telethon**━━❖\n   ↳ `Versi {version.__version__}` \n"
+        f"❖━━🐍 **Python**━━❖\n   ↳ `Versi {python_version()}` \n"
+        f"❖━━👾 **Versi Bot**━━❖\n   ↳ `{BOT_VER}` \n"
+        f"❖━━📂 **Modul**━━❖\n   ↳ `{len(modules)}` \n\n"
         f"♚ **Repo Last:** [Last-Userbot](https://github.com/PashaDIE/Last-UBOT)\n🛠️ **Group Support: **[Tekan](t.me/Lastuserbot)\n👨‍💻 **Abang²an:** [Pasha](t.me/PashaDIE)\n"
-        f"══════════════════════")
+        f"═════════════════════")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
