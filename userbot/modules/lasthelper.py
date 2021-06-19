@@ -11,10 +11,10 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 @register(outgoing=True, pattern="^.lhelp$")
 async def usit(e):
     await e.edit(
-        f"**Hai Bang {DEFAULTUSER} Kalau Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
-        "\n[Abang²an](t.me/PashaDIE)"
-        "\n[Repo](https://github.com/PashaDIE/Last-UBOT)"
-        "\n[Instagram Abang²an](Instagram.com/pdie.09)")
+        f"**Hai Bang 《-{DEFAULTUSER}-》 Kalau Anda Tidak Tau Perintah Untuk Memerintah Ku Ketik** `.help` Atau Bisa Minta Bantuan Ke:\n"
+        "\n-->>>[Abang²an]<<<--(t.me/PashaDIE)"
+        "\n-->>>[Repo]<<<--(https://github.com/PashaDIE/Last-UBOT)"
+        "\n-->>>[Instagram Abang²an]<<<--(Instagram.com/pdie.09)")
 
 
 @register(outgoing=True, pattern="^.vars$")
