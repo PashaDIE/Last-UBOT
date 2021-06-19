@@ -108,7 +108,7 @@ async def set_var(var):
                 "**Mengganti Config Vars**:\n"
                 f"`{variable}` = `{value}`"
             )
-        await var.edit("`Sedang Di Proses Tuan, Mohon Menunggu Dalam Beberapa Detik`")
+        await var.edit("`Sedang Di Proses Bang, Mohon Menunggu Dalam Beberapa Detik`")
     else:
         if BOTLOG:
             await var.client.send_message(
@@ -116,7 +116,7 @@ async def set_var(var):
                 "**Menambahkan Config Vars**:\n"
                 f"`{variable}` **=** `{value}`"
             )
-        await var.edit("`Linux Menambahkan Config Vars...`")
+        await var.edit("`Last Menambahkan Config Vars...`")
     heroku_var[variable] = value
 
 
@@ -133,7 +133,7 @@ async def dyno_usage(dyno):
     await dyno.edit("Memproses, Mohon Tunggu sebentar...⌛")
     await asyncio.sleep(1)
     useragent = (
-        'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
+        'Mozilla/5.0 (Last; Android 10; SM-G975F) '
         'AppleWebKit/537.36 (KHTML, like Gecko) '
         'Chrome/81.0.4044.117 Mobile Safari/537.36'
     )
@@ -216,7 +216,7 @@ async def _(dyno):
     key = (requests.post("https://nekobin.com/api/documents",
                          json={"content": data}) .json() .get("result") .get("key"))
     url = f"https://nekobin.com/raw/{key}"
-    await dyno.edit(f"`Ini Logs Heroku Anda Tuan :`\n\nPaste Ke: [Nekobin]({url})")
+    await dyno.edit(f"`Ini Logs Heroku Anda Bang :`\n\nPaste Ke: [Nekobin]({url})")
     return os.remove("logs.txt")
 
 
