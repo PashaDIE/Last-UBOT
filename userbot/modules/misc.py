@@ -121,7 +121,7 @@ async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
         "《━━━❖<REPO>❖━━━》\n"
-        " [🐣Last-Userbot🐣](https://github.com/PashaDIE/Last-UBOT)\n"
+        " 🐣*Last-Userbot*🐣 [TEKAN](https://github.com/PashaDIE/Last-UBOT)\n"
         "《━━━❖<OWNER>❖━━━》\n"
         " 🤴🏻*Abang²an* : [Pasha](t.me/PashaDIE)\n"
         "━━━━━━━━━━━━━━━━\n"
