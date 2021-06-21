@@ -123,10 +123,10 @@ async def repo_is_here(wannasee):
         "《━━━❖<REPO>❖━━━》\n"
         " [🐣Last-Userbot🐣](https://github.com/PashaDIE/Last-UBOT)\n"
         "《━━━❖<OWNER>❖━━━》\n"
-        "│👨‍💻 **Mastah :** [Pasha](t.me/PashaDIE)\n"
+        " 🤴🏻*Abang²an* : [Pasha](t.me/PashaDIE)\n"
         "━━━━━━━━━━━━━━━━\n"
-        "  Tutorial    : [Tutorial Deploy](https://telegra.ph/Deploy-04-06)"
-        "  Deploy      : [Tekan Disini](https://heroku.com/deploy?template=https://github.com/PashaDOE/Last-UBOT)"
+        "  Tutorial  : [Tutorial Deploy](https://telegra.ph/Deploy-04-06)"
+        "  Deploy    : [Tekan Disini](https://heroku.com/deploy?template=https://github.com/PashaDOE/Last-UBOT)"
         "━━━━━━━━━━━━━━━━━━\n"
     )
 
