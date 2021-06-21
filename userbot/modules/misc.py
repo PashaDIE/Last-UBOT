@@ -126,7 +126,7 @@ async def repo_is_here(wannasee):
         " 🤴🏻*Abang²an* : [Pasha](t.me/PashaDIE)\n"
         "━━━━━━━━━━━━━━━━\n"
         "  Tutorial  : [Tutorial Deploy](https://telegra.ph/Deploy-04-06)"
-        "  Deploy    : [Tekan Disini](https://heroku.com/deploy?template=https://github.com/PashaDOE/Last-UBOT)"
+        "  Deploy    : [Tekan Disini](https://heroku.com/deploy?template=https://github.com/PashaDOE/Last-UBOT)\n"
         "━━━━━━━━━━━━━━━━━━\n"
     )
 
