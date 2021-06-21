@@ -93,7 +93,7 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Beberapa Repo Dan File:\n"
-        "\n[🐣Linux-Userbot🐣 Repo](https://github.com/PashaDIE/Last-UBOT/blob/Last-Userbot/README.md)"
+        "\n[🐣Last-Userbot🐣 Repo](https://github.com/PashaDIE/Last-UBOT/blob/Last-Userbot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Setup Guide - Google Drive](https://telegra.ph/How-To-Setup-GDrive-11-02)"
         "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
@@ -121,9 +121,9 @@ async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
         "《━━━❖<REPO>❖━━━》\n"
-        " 🐣*Last-Userbot*🐣 [TEKAN](https://github.com/PashaDIE/Last-UBOT)\n"
+        " 🐣Last-Userbot🐣 : [TEKAN](https://github.com/PashaDIE/Last-UBOT)\n"
         "《━━━❖<OWNER>❖━━━》\n"
-        " 🤴🏻*Abang²an* : [Pasha](t.me/PashaDIE)\n"
+        " 🤴🏻 Abang²an : [Pasha](t.me/PashaDIE)\n"
         "━━━━━━━━━━━━━━━━\n"
         "  Tutorial  : [Tutorial Deploy](https://telegra.ph/Deploy-04-06)"
         "  Deploy    : [Tekan Disini](https://heroku.com/deploy?template=https://github.com/PashaDOE/Last-UBOT)\n"
