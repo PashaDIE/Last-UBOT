@@ -213,14 +213,16 @@ class SqlDB(_BaseDatabase):
 
     def set(self, key, value):
         try:
-            self._cursor.execute(f"ALTER TABLE Ultroid DROP COLUMN IF EXISTS {key}")
+            self._cursor.execute(
+                f"ALTER TABLE Ultroid DROP COLUMN IF EXISTS {key}")
         except (psycopg2.errors.UndefinedColumn, psycopg2.errors.SyntaxError):
             pass
         except BaseException as er:
             LOGS.exception(er)
         self._cache.update({key: value})
         self._cursor.execute(f"ALTER TABLE Ultroid ADD {key} TEXT")
-        self._cursor.execute(f"INSERT INTO Ultroid ({key}) values (%s)", (str(value),))
+        self._cursor.execute(
+            f"INSERT INTO Ultroid ({key}) values (%s)", (str(value),))
         return True
 
     def delete(self, key):
@@ -274,14 +276,16 @@ class RedisDB(_BaseDatabase):
         if platform.lower() == "qovery" and not host:
             var, hash_, host, password = "", "", "", ""
             for vars_ in os.environ:
-                if vars_.startswith("QOVERY_REDIS_") and vars.endswith("_HOST"):
+                if vars_.startswith(
+                        "QOVERY_REDIS_") and vars.endswith("_HOST"):
                     var = vars_
             if var:
                 hash_ = var.split("_", maxsplit=2)[1].split("_")[0]
             if hash:
                 kwargs["host"] = os.environ.get(f"QOVERY_REDIS_{hash_}_HOST")
                 kwargs["port"] = os.environ.get(f"QOVERY_REDIS_{hash_}_PORT")
-                kwargs["password"] = os.environ.get(f"QOVERY_REDIS_{hash_}_PASSWORD")
+                kwargs["password"] = os.environ.get(
+                    f"QOVERY_REDIS_{hash_}_PASSWORD")
         self.db = Redis(**kwargs)
         self.set = self.db.set
         self.get = self.db.get
@@ -321,7 +325,6 @@ class LocalDB(_BaseDatabase):
 
 
 def UltroidDB():
-    _er = False
     from .. import HOSTED_ON
 
     try:

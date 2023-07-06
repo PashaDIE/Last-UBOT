@@ -171,7 +171,8 @@ def ultroid_cmd(
                 ftext += f"`\n**Hosted At:** `{HOSTED_ON}`\n\n"
                 ftext += "--------START ULTROID CRASH LOG--------"
                 ftext += "\n**Date:** `" + date
-                ftext += "`\n**Group:** `" + str(ult.chat_id) + "` " + str(naam)
+                ftext += "`\n**Group:** `" + \
+                    str(ult.chat_id) + "` " + str(naam)
                 ftext += "\n**Sender ID:** `" + str(ult.sender_id)
                 ftext += "`\n**Replied:** `" + str(ult.is_reply)
                 ftext += "`\n\n**Event Trigger:**`\n"
@@ -245,7 +246,8 @@ def ultroid_cmd(
         if TAKE_EDITS:
 
             def func_(x):
-                return not x.via_bot_id and not (x.is_channel and x.chat.broadcast)
+                return not x.via_bot_id and not (
+                    x.is_channel and x.chat.broadcast)
 
             ultroid_bot.add_event_handler(
                 wrapp,

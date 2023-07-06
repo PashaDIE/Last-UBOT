@@ -530,7 +530,7 @@ async def _(event):
     await bot(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
         pfile
     ))
-    #message_id_to_reply = event.message.reply_to_msg_id
+    # message_id_to_reply = event.message.reply_to_msg_id
     # if not message_id_to_reply:
     #    message_id_to_reply = event.message.id
     # await bot.send_message(

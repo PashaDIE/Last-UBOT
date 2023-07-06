@@ -63,7 +63,8 @@ async def _callback_check(event):
 
 
 async def get_update_linked_chat(event):
-    if _ult_cache.get("LINKED_CHATS") and _ult_cache["LINKED_CHATS"].get(event.chat_id):
+    if _ult_cache.get("LINKED_CHATS") and _ult_cache["LINKED_CHATS"].get(
+            event.chat_id):
         _ignore = _ult_cache["LINKED_CHATS"][event.chat_id]["linked_chat"]
     else:
         channel = await event.client(
@@ -71,7 +72,8 @@ async def get_update_linked_chat(event):
         )
         _ignore = channel.full_chat.linked_chat_id
         if _ult_cache.get("LINKED_CHATS"):
-            _ult_cache["LINKED_CHATS"].update({event.chat_id: {"linked_chat": _ignore}})
+            _ult_cache["LINKED_CHATS"].update(
+                {event.chat_id: {"linked_chat": _ignore}})
         else:
             _ult_cache.update(
                 {"LINKED_CHATS": {event.chat_id: {"linked_chat": _ignore}}}
@@ -138,7 +140,11 @@ def lock_unlock(query, lock=True):
     rights = types.ChatBannedRights(None)
     _do = lock
     if query == "msgs":
-        for i in ["send_messages", "invite_users", "pin_messages" "change_info"]:
+        for i in [
+            "send_messages",
+            "invite_users",
+            "pin_messages"
+                "change_info"]:
             setattr(rights, i, _do)
     elif query == "media":
         setattr(rights, "send_media", _do)

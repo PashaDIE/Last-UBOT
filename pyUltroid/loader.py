@@ -57,7 +57,13 @@ class Loader:
             )
         for plugin in sorted(files):
             if func == import_module:
-                plugin = plugin.replace(".py", "").replace("/", ".").replace("\\", ".")
+                plugin = plugin.replace(
+                    ".py",
+                    "").replace(
+                    "/",
+                    ".").replace(
+                    "\\",
+                    ".")
             try:
                 modl = func(plugin)
             except ModuleNotFoundError as er:
@@ -66,7 +72,8 @@ class Loader:
                 continue
             except Exception as exc:
                 modl = None
-                self._logger.error(f"pyUltroid - {self.key} - ERROR - {plugin}")
+                self._logger.error(
+                    f"pyUltroid - {self.key} - ERROR - {plugin}")
                 self._logger.exception(exc)
                 continue
             if _single and log:

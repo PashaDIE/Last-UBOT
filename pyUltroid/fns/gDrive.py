@@ -53,7 +53,10 @@ class GDriveManager:
             _auth_flow = self._flow["_"]
             credentials = _auth_flow.step2_exchange(code)
             Storage(self.token_file).put(credentials)
-            return udB.set_key("GDRIVE_AUTH_TOKEN", str(open(self.token_file).read()))
+            return udB.set_key(
+                "GDRIVE_AUTH_TOKEN", str(
+                    open(
+                        self.token_file).read()))
         try:
             _auth_flow = OAuth2WebServerFlow(
                 udB.get_key("GDRIVE_CLIENT_ID")
@@ -124,11 +127,10 @@ class GDriveManager:
                 speed = round(completed / diff, 2)
                 eta = round((total_size - completed) / speed, 2) * 1000
                 crnt_txt = (
-                    f"`Uploading {filename} to GDrive...\n\n"
-                    + f"Status: {humanbytes(completed)}/{humanbytes(total_size)} »» {percentage}%\n"
-                    + f"Speed: {humanbytes(speed)}/s\n"
-                    + f"ETA: {time_formatter(eta)}`"
-                )
+                    f"`Uploading {filename} to GDrive...\n\n" +
+                    f"Status: {humanbytes(completed)}/{humanbytes(total_size)} »» {percentage}%\n" +
+                    f"Speed: {humanbytes(speed)}/s\n" +
+                    f"ETA: {time_formatter(eta)}`")
                 if round((diff % 10.00) == 0) or last_txt != crnt_txt:
                     await event.edit(crnt_txt)
                     last_txt = crnt_txt
@@ -173,11 +175,10 @@ class GDriveManager:
                     speed = round(completed / diff, 2)
                     eta = round((total_size - completed) / speed, 2) * 1000
                     crnt_txt = (
-                        f"`Downloading {filename} from GDrive...\n\n"
-                        + f"Status: {humanbytes(completed)}/{humanbytes(total_size)} »» {percentage}%\n"
-                        + f"Speed: {humanbytes(speed)}/s\n"
-                        + f"ETA: {time_formatter(eta)}`"
-                    )
+                        f"`Downloading {filename} from GDrive...\n\n" +
+                        f"Status: {humanbytes(completed)}/{humanbytes(total_size)} »» {percentage}%\n" +
+                        f"Speed: {humanbytes(speed)}/s\n" +
+                        f"ETA: {time_formatter(eta)}`")
                     if round((diff % 10.00) == 0) or last_txt != crnt_txt:
                         await event.edit(crnt_txt)
                         last_txt = crnt_txt
@@ -201,7 +202,8 @@ class GDriveManager:
             if files["mimeType"] == self.gdrive_creds["dir_mimetype"]:
                 _files[self._create_folder_link(files["id"])] = files["title"]
             else:
-                _files[self._create_download_link(files["id"])] = files["title"]
+                _files[self._create_download_link(
+                    files["id"])] = files["title"]
         return _files
 
     def create_directory(self, directory):

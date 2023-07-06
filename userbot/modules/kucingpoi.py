@@ -52,12 +52,12 @@ def search(anime):
                 my_title3 = my_title2.replace(r"mp4", "")
                 result_anime.append(
                     {"title": my_title3.replace(r"NekoPoi", ""), "id": result_id})
-        return{
+        return {
             "result": result_anime,
             "response": "200"
         }
     else:
-        return{
+        return {
             "result": "Not Found",
             "response": "404"
         }

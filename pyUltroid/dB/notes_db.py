@@ -15,9 +15,11 @@ def get_stuff():
 def add_note(chat, word, msg, media, button):
     ok = get_stuff()
     if ok.get(int(chat)):
-        ok[int(chat)].update({word: {"msg": msg, "media": media, "button": button}})
+        ok[int(chat)].update(
+            {word: {"msg": msg, "media": media, "button": button}})
     else:
-        ok.update({int(chat): {word: {"msg": msg, "media": media, "button": button}}})
+        ok.update(
+            {int(chat): {word: {"msg": msg, "media": media, "button": button}}})
     udB.set_key("NOTE", ok)
 
 

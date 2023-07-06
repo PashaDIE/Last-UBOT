@@ -12,7 +12,6 @@ import shutil
 import time
 from random import randint
 
-from ..configs import Var
 
 try:
     from pytz import timezone
@@ -52,9 +51,8 @@ async def autoupdate_local_database():
     from .. import Var, asst, udB, ultroid_bot
 
     global db_url
-    db_url = (
-        udB.get_key("TGDB_URL") or Var.TGDB_URL or ultroid_bot._cache.get("TGDB_URL")
-    )
+    db_url = (udB.get_key("TGDB_URL")
+              or Var.TGDB_URL or ultroid_bot._cache.get("TGDB_URL"))
     if db_url:
         _split = db_url.split("/")
         _channel = _split[-2]
@@ -91,12 +89,11 @@ def update_envs():
     from .. import udB
     _envs = [*list(os.environ)]
     if ".env" in os.listdir("."):
-        [_envs.append(_) for _ in list(RepositoryEnv(config._find_file(".")).data)]
+        [_envs.append(_)
+         for _ in list(RepositoryEnv(config._find_file(".")).data)]
     for envs in _envs:
-        if (
-            envs in ["LOG_CHANNEL", "BOT_TOKEN", "BOTMODE", "DUAL_MODE", "language"]
-            or envs in udB.keys()
-        ):
+        if (envs in ["LOG_CHANNEL", "BOT_TOKEN", "BOTMODE",
+                     "DUAL_MODE", "language"] or envs in udB.keys()):
             if _value := os.environ.get(envs):
                 udB.set_key(envs, _value)
             else:
@@ -415,7 +412,8 @@ async def plug(plugin_channels):
             async for x in ultroid_bot.iter_messages(
                 chat, search=".py", filter=InputMessagesFilterDocument, wait_time=10
             ):
-                plugin = "addons/" + x.file.name.replace("_", "-").replace("|", "-")
+                plugin = "addons/" + \
+                    x.file.name.replace("_", "-").replace("|", "-")
                 if not os.path.exists(plugin):
                     await asyncio.sleep(0.6)
                     if x.text == "#IGNORE":
@@ -424,7 +422,8 @@ async def plug(plugin_channels):
                     try:
                         load_addons(plugin)
                     except Exception as e:
-                        LOGS.info(f"Ultroid - PLUGIN_CHANNEL - ERROR - {plugin}")
+                        LOGS.info(
+                            f"Ultroid - PLUGIN_CHANNEL - ERROR - {plugin}")
                         LOGS.exception(e)
                         os.remove(plugin)
         except Exception as er:
@@ -487,7 +486,9 @@ async def ready():
             try:
                 await ultroid_bot.delete_messages(chat_id, int(prev_spam))
             except Exception as E:
-                LOGS.info("Error while Deleting Previous Update Message :" + str(E))
+                LOGS.info(
+                    "Error while Deleting Previous Update Message :" +
+                    str(E))
         if await updater():
             BTTS = Button.inline("Update Available", "updtavail")
 

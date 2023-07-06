@@ -30,7 +30,8 @@ def cmd_reply(cmd):
     ok = get_stuff()
     if ok.get(cmd):
         okk = ok[cmd]
-        return okk["msg"], okk["media"], okk["button"] if ok.get("button") else None
+        return okk["msg"], okk["media"], okk["button"] if ok.get(
+            "button") else None
     return
 
 

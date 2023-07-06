@@ -129,7 +129,8 @@ async def metadata(file):
         }
     if info.get("AudioCount"):
         data["title"] = info.get("Title", file)
-        data["performer"] = info.get("Performer") or udB.get_key("artist") or ""
+        data["performer"] = info.get(
+            "Performer") or udB.get_key("artist") or ""
     if info.get("VideoCount"):
         data["height"] = int(float(_info[1].get("Height", 720)))
         data["width"] = int(float(_info[1].get("Width", 1280)))
@@ -284,7 +285,7 @@ def text_set(text):
             else:
                 k = len(line) // 55
                 for z in range(1, k + 2):
-                    lines.append(line[((z - 1) * 55) : (z * 55)])
+                    lines.append(line[((z - 1) * 55): (z * 55)])
     return lines[:25]
 
 
@@ -389,8 +390,7 @@ async def get_google_images(query):
         re.findall(
             r"\[\"(https\:\/\/encrypted-tbn0\.gstatic\.com\/images\?.*?)\",\d+,\d+\]",
             str(matched_google_image_data),
-        )
-    ).split(", ")
+        )).split(", ")
     thumbnails = [
         bytes(bytes(thumbnail, "ascii").decode("unicode-escape"), "ascii").decode(
             "unicode-escape"
@@ -412,10 +412,8 @@ async def get_google_images(query):
         )
         for img in matched_google_full_resolution_images
     ]
-    for index, (metadata, thumbnail, original) in enumerate(
-        zip(soup.select(".isv-r.PNCib.MSM1fd.BUooTd"), thumbnails, full_res_images),
-        start=1,
-    ):
+    for index, (metadata, thumbnail, original) in enumerate(zip(soup.select(
+            ".isv-r.PNCib.MSM1fd.BUooTd"), thumbnails, full_res_images), start=1, ):
         google_images.append(
             {
                 "title": metadata.select_one(".VFACy.kGQAp.sMi44c.lNHeqe.WGvvNb")[
@@ -445,6 +443,7 @@ async def get_chatbot_reply(message):
         return (await async_searcher(req_link, re_json=True)).get("reply")
     except Exception:
         LOGS.info(f"**ERROR:**`{format_exc()}`")
+
 
 def check_filename(filroid):
     if os.path.exists(filroid):
@@ -514,7 +513,8 @@ def four_point_transform(image, pts):
     try:
         import cv2
     except ImportError:
-        raise DependencyMissingError("This function needs 'cv2' to be installed.")
+        raise DependencyMissingError(
+            "This function needs 'cv2' to be installed.")
     rect = order_points(pts)
     (tl, tr, br, bl) = rect
     widthA = np.sqrt(((br[0] - bl[0]) ** 2) + ((br[1] - bl[1]) ** 2))
@@ -563,8 +563,9 @@ def telegraph_client():
     except Exception as er:
         if "SHORT_NAME_TOO_LONG" in str(er):
             TelegraphClient.create_account(
-                short_name="ultroiduser", author_name=gd_name, author_url=profile_url
-            )
+                short_name="ultroiduser",
+                author_name=gd_name,
+                author_url=profile_url)
         else:
             LOGS.exception(er)
             return
@@ -649,7 +650,8 @@ def _package_rpc(text, lang_src="auto", lang_tgt="auto"):
     GOOGLE_TTS_RPC = ["MkEWBc"]
     parameter = [[text.strip(), lang_src, lang_tgt, True], [1]]
     escaped_parameter = json.dumps(parameter, separators=(",", ":"))
-    rpc = [[[random.choice(GOOGLE_TTS_RPC), escaped_parameter, None, "generic"]]]
+    rpc = [
+        [[random.choice(GOOGLE_TTS_RPC), escaped_parameter, None, "generic"]]]
     espaced_rpc = json.dumps(rpc, separators=(",", ":"))
     freq = "f.req={}&".format(quote(espaced_rpc))
     return freq
@@ -666,7 +668,9 @@ def translate(*args, **kwargs):
     x = requests.post(
         "https://translate.google.co.in/_/TranslateWebserverUi/data/batchexecute",
         headers=headers,
-        data=_package_rpc(*args, **kwargs),
+        data=_package_rpc(
+            *args,
+            **kwargs),
     ).text
     response = ""
     data = json.loads(json.loads(x[4:])[0][2])[1][0][0]
@@ -791,7 +795,8 @@ class TgConverter:
         try:
             import cv2
         except ImportError:
-            raise DependencyMissingError("This function needs 'cv2' to be installed.")
+            raise DependencyMissingError(
+                "This function needs 'cv2' to be installed.")
         img = cv2.VideoCapture(input_)
         ult, roid = img.read()
         cv2.imwrite(name, roid)
@@ -853,7 +858,8 @@ class TgConverter:
             for exte in ["png", "jpg", "jpeg", "webp"]:
                 if recycle_type(exte):
                     name = outname + "." + exte
-                    return TgConverter.to_image(input_file, name, remove=remove_old)
+                    return TgConverter.to_image(
+                        input_file, name, remove=remove_old)
         # Image to Something
         elif ext in ["jpg", "jpeg", "png", "webp"]:
             for extn in ["png", "webp", "ico"]:

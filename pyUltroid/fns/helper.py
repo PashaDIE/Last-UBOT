@@ -13,7 +13,6 @@ import sys
 import time
 from traceback import format_exc
 from urllib.parse import unquote
-from urllib.request import urlretrieve
 
 from .. import run_as_module
 
@@ -85,7 +84,8 @@ def make_mention(user, custom=None):
 
 
 def inline_mention(user, custom=None, html=False):
-    mention_text = get_display_name(user) or "Deleted Account" if not custom else custom
+    mention_text = get_display_name(
+        user) or "Deleted Account" if not custom else custom
     if isinstance(user, types.User):
         if html:
             return f"<a href=tg://user?id={user.id}>{mention_text}</a>"
@@ -263,7 +263,7 @@ async def bash(cmd, run_code=0):
     err = stderr.decode().strip() or None
     out = stdout.decode().strip()
     if not run_code and err:
-        if match := re.match("\/bin\/sh: (.*): ?(\w+): not found", err):
+        if match := re.match("\\/bin\\/sh: (.*): ?(\\w+): not found", err):
             return out, f"{match.group(2).upper()}_NOT_FOUND"
     return out, err
 
@@ -276,7 +276,8 @@ async def updater():
     from .. import LOGS
 
     try:
-        off_repo = Repo().remotes[0].config_reader.get("url").replace(".git", "")
+        off_repo = Repo().remotes[0].config_reader.get(
+            "url").replace(".git", "")
     except Exception as er:
         LOGS.exception(er)
         return
@@ -298,7 +299,9 @@ async def updater():
         repo.heads.main.set_tracking_branch(origin.refs.main)
         repo.heads.main.checkout(True)
     ac_br = repo.active_branch.name
-    repo.create_remote("upstream", off_repo) if "upstream" not in repo.remotes else None
+    repo.create_remote(
+        "upstream",
+        off_repo) if "upstream" not in repo.remotes else None
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
     changelog, tl_chnglog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
@@ -365,7 +368,8 @@ async def async_searcher(
 ):
     if aiohttp_client:
         async with aiohttp_client(headers=headers) as client:
-            method = client.head if head else (client.post if post else client.get)
+            method = client.head if head else (
+                client.post if post else client.get)
             data = await method(url, *args, **kwargs)
             if evaluate:
                 return await evaluate(data)
@@ -398,7 +402,8 @@ async def download_file(link, name, validate=False):
     """for files, without progress callback with aiohttp"""
 
     async def _download(content):
-        if validate and "application/json" in content.headers.get("Content-Type"):
+        if validate and "application/json" in content.headers.get(
+                "Content-Type"):
             return None, await content.json()
         with open(name, "wb") as file:
             file.write(await content.read())

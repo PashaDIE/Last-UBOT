@@ -64,7 +64,11 @@ def main():
         _plugins = "autocorrect autopic audiotools compressor forcesubscribe fedutils gdrive glitch instagram nsfwfilter nightmode pdftools profanityfilter writer youtube"
         udB.set_key("EXCLUDE_OFFICIAL", _plugins)
 
-    load_other_plugins(addons=addons, pmbot=pmbot, manager=manager, vcbot=vcbot)
+    load_other_plugins(
+        addons=addons,
+        pmbot=pmbot,
+        manager=manager,
+        vcbot=vcbot)
 
     suc_msg = """
             ----------------------------------------------------------------------

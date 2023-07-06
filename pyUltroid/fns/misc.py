@@ -10,9 +10,7 @@ import os
 import random
 import re
 import string
-from logging import WARNING
 from random import choice, randrange, shuffle
-from traceback import format_exc
 
 from pyUltroid.exceptions import DependencyMissingError
 
@@ -163,7 +161,8 @@ async def allcmds(event, telegraph):
 
 async def ReTrieveFile(input_file_name):
     if not aiohttp:
-        raise DependencyMissingError("This function needs 'aiohttp' to be installed.")
+        raise DependencyMissingError(
+            "This function needs 'aiohttp' to be installed.")
     RMBG_API = udB.get_key("RMBG_API")
     headers = {"X-API-Key": RMBG_API}
     files = {"image_file": open(input_file_name, "rb").read()}
@@ -425,7 +424,8 @@ class Quotly:
             raise er
         if request.get("ok"):
             with open(file_name, "wb") as file:
-                image = base64.decodebytes(request["result"]["image"].encode("utf-8"))
+                image = base64.decodebytes(
+                    request["result"]["image"].encode("utf-8"))
                 file.write(image)
             return file_name
         raise Exception(str(request))
@@ -444,10 +444,14 @@ def split_list(List, index):
 
 def rotate_image(image, angle):
     if not cv2:
-        raise DependencyMissingError("This function needs 'cv2' to be installed!")
+        raise DependencyMissingError(
+            "This function needs 'cv2' to be installed!")
     image_center = tuple(np.array(image.shape[1::-1]) / 2)
     rot_mat = cv2.getRotationMatrix2D(image_center, angle, 1.0)
-    return cv2.warpAffine(image, rot_mat, image.shape[1::-1], flags=cv2.INTER_LINEAR)
+    return cv2.warpAffine(image,
+                          rot_mat,
+                          image.shape[1::-1],
+                          flags=cv2.INTER_LINEAR)
 
 
 def random_string(length=3):

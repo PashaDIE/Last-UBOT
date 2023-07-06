@@ -105,7 +105,8 @@ async def get_chat_info(chat, event):
     messages_sent_alt = getattr(full, "read_outbox_max_id", None)
     exp_count = getattr(full, "pts", None)
     supergroup = "<b>Yes</b>" if getattr(chat, "megagroup", None) else "No"
-    creator_username = "@{}".format(creator_username) if creator_username else None
+    creator_username = "@{}".format(
+        creator_username) if creator_username else None
 
     if admins is None:
         try:
